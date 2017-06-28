@@ -10,6 +10,16 @@ Log to an Airtable table when there's an unhandled exception.  Supported as an E
 const app = express();
 const airTableLogging = require('airtable-error-logging')({apiKey: 'gtahfetE31', base: 'appy0tae31'});
 app.use(airTableLogging.middleware);
+
+app.get('/', function(req, res){
+	res.send('Hello World!');
+});
+
+app.get('/error', function(req, res){
+    //Going to this route will cause a row to be inserted into your Airtable `Error` table
+	throw new Error('This is an error');
+});
+
 app.listen(3000, function(e){
 	if(e !== undefined){
 		console.error(e);
@@ -24,9 +34,9 @@ app.listen(3000, function(e){
 
 Create a table in Airtable with the following structure
 
-| Column Name : | Time  | Stacktrace | Message  | Parameters | Headers |
+| Column Name: | Time  | Stacktrace | Message  | Parameters | Headers |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Data Type : | Time  | Single Line/Long Text  | Single Line/Long Text  | Single Line/Long Text  | Single Line/Long Text |
+| Data Type: | Time  | Single Line/Long Text  | Single Line/Long Text  | Single Line/Long Text  | Single Line/Long Text |
 
 
 ## Object Parameter Key/Values
