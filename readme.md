@@ -43,7 +43,7 @@ Create a table in Airtable with the following structure
 
 * `apiKey` your Airtable API key.  Found at https://airtable.com/account
 * `base` the current base which contains the table you wish to log the error to
-* `table` (optional) the name of the table you wish to log errors to.  Must follow the schema outlined in [setup](#Setup).  Defaults to 'Errors'
+* `table` (optional) the name of the table you wish to log errors to.  Must follow the schema outlined in [setup](#setup).  Defaults to 'Errors'
 
 ## Notes
 
