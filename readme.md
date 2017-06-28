@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/error', function(req, res){
-    //Going to this route will cause a row to be inserted into your Airtable `Error` table
+        //Going to this route will cause a row to be inserted into your Airtable `Error` table
 	throw new Error('This is an error');
 });
 
