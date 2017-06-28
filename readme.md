@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/error', function(req, res){
-        //Going to this route will cause a row to be inserted into your Airtable `Error` table
+        //Going to this route will cause a row to be inserted into your Airtable `Errors` table
 	throw new Error('This is an error');
 });
 
@@ -42,8 +42,8 @@ Create a table in Airtable with the following structure
 ## Object Parameter Key/Values
 
 * `apiKey` your Airtable API key.  Found at https://airtable.com/account
-* `base` the current base which contains the table you wish to log the error to.
-* `table` the name of the table you wish to log errors to.  Must follow the schema outlined in [setup](#setup)
+* `base` the current base which contains the table you wish to log the error to
+* `table` (optional) the name of the table you wish to log errors to.  Must follow the schema outlined in [setup](#Setup).  Defaults to 'Errors'
 
 ## Notes
 
