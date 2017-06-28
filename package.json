@@ -1,0 +1,24 @@
+{
+  "name": "airtable-error-logging",
+  "version": "0.1.0",
+  "description": "Log to an Airtable table when there's an unhandled exception",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/index.js"
+  },
+  "author": "Brian Rosamilia",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.5.0",
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "proxyquire": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
+  }
+}
